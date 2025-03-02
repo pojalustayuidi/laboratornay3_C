@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+struct times
+{
+	int hours;
+	int minutes;
+	int seconds;
+};
+void swap(times& a, times& b) {
+	times c = a;
+	a = b;
+	b = c;
+}
+int main() {
+	setlocale(LC_ALL, “Russian”);
+	times a, b;
+	char q;
+	cout << «Введите первое время в формате hh:mm:ss :    «;
+	cin >> a.hours >> q >> a.minutes >> q >> a.seconds;
+	cout << «Введите второе время в формате hh:mm:ss :    «;
+	cin >> b.hours >> q >> b.minutes >> q >> b.seconds;
+	swap(a, b);
+	cout << “Первое число:  “ <<a.hours << “:” << a.minutes << “:” << a.seconds << endl;
+	cout << “Второе число:  “ << b.hours << “:” << b.minutes << “:” << b.seconds << endl;
+
+
+}
