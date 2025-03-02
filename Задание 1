@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+long hms_to_secs(int hours, int sec, int minutes) {
+	return (hours * 3600) + (minutes * 60) + sec;
+}
+
+int main(){
+	setlocale(LC_ALL, "Russian");
+	int hours, sec, minutes;
+	cout << "Введите кол-во часов:  ";
+	cin >> hours;
+	cout << "Введите кол-во минут:  ";
+	cin >> minutes;
+	cout << "Введите кол-во секунд:  ";
+	cin >> sec;
+
+	cout << "Всего секунд:  " << hms_to_secs(hours, minutes, sec);
+
+	
+
+}
