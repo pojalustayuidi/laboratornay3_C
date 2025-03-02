@@ -1,0 +1,15 @@
+1 способ (через глобальную переменную)
+
+#include <iostream>
+using namespace std;
+int a = 1;
+void func() {
+	cout << “Функция была вызвана:  “ << a << “ раз” << endl;
+	a++;
+}
+int main() {
+	setlocale(LC_ALL, “Russian”);
+	for (int I = 0; I < 10; i++) {
+		func();
+	}
+}
